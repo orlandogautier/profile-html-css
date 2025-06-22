@@ -25,6 +25,7 @@ main.container {
 
 header.header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
   margin-bottom: 30px;
@@ -59,13 +60,19 @@ nav.socials a {
   font-weight: bold;
 }
 
+nav.socials a:hover {
+  text-decoration: underline;
+  color: #005582;
+}
+
 section.section {
-  margin-top: 25px;
+  margin-top: 35px;
 }
 
 section.section h2 {
   color: #0073b1;
   margin-bottom: 10px;
+  font-size: 20px;
 }
 
 ul {
@@ -74,4 +81,25 @@ ul {
 
 ul li {
   margin-bottom: 8px;
+}
+
+/* 📱 Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+  header.header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  section.section {
+    margin-top: 25px;
+  }
 }
