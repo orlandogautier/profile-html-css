@@ -1,2 +1,2 @@
-# perfil-html-css
+# profile-html-css
 A basic web profile using HTML and CSS.
