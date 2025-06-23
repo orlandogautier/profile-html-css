@@ -1,5 +1,6 @@
 /* styles.css */
 
+/*  Reset and typography */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +13,7 @@ body {
   color: #333;
   line-height: 1.6;
   padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main.container {
@@ -21,6 +23,7 @@ main.container {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header.header {
@@ -37,6 +40,7 @@ header.header {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #0073b1;
+  transition: border-color 0.3s ease;
 }
 
 h1 {
@@ -58,6 +62,7 @@ nav.socials a {
   text-decoration: none;
   color: #0073b1;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav.socials a:hover {
@@ -83,7 +88,22 @@ ul li {
   margin-bottom: 8px;
 }
 
-/* 📱 Media Query para pantallas pequeñas */
+.theme-toggle {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  background-color: #0073b1;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: start;
+}
+
+.theme-toggle:hover {
+  background-color: #005582;
+}
+
 @media (max-width: 600px) {
   header.header {
     flex-direction: column;
@@ -102,4 +122,38 @@ ul li {
   section.section {
     margin-top: 25px;
   }
+}
+
+/* -------- Dark Mode -------- */
+body.dark-mode {
+  background-color: black !important;
+  color: white !important;
+}
+
+
+body.dark-mode main.container {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .profile-img {
+  border-color: #90caf9;
+}
+
+body.dark-mode nav.socials a {
+  color: #90caf9;
+}
+
+body.dark-mode nav.socials a:hover {
+  color: #63a4ff;
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #90caf9;
+  color: #121212;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: #63a4ff;
 }
